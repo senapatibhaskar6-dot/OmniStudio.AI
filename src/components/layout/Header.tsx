@@ -45,9 +45,16 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onSelectTab }) => {
     <header className="sticky top-0 z-40 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6">
         {/* Brand & Active Breadcrumb */}
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 shadow-lg shadow-indigo-500/25">
-            <Sparkles className="h-5 w-5 text-white" />
+        <div 
+          onClick={() => onSelectTab('overview')} 
+          className="flex items-center gap-3 cursor-pointer group"
+        >
+          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl overflow-hidden border border-indigo-500/40 bg-slate-900 shadow-lg shadow-indigo-500/20 group-hover:border-indigo-400 group-hover:shadow-indigo-500/40 transition-all">
+            <img 
+              src="/logo.png" 
+              alt="OmniStudio AI Logo" 
+              className="h-full w-full object-cover group-hover:scale-105 transition-transform"
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">

@@ -24,12 +24,12 @@ import { CatalogProduct, CatalogSettings } from '../../types';
 export const PdfCatalogStudio: React.FC = () => {
   // Catalog Configuration
   const [settings, setSettings] = useState<CatalogSettings>({
-    catalogTitle: '2026 Premium Audio & Creator Gear Catalog',
-    companyName: 'Apex Audio Labs Inc.',
-    tagline: 'Acoustic Precision for Modern Sound Creators',
-    contactEmail: 'sales@apexaudiolabs.com',
+    catalogTitle: '2026 Commercial Creator & Tech Gear Lookbook',
+    companyName: 'OmniStudio AI Labs',
+    tagline: 'AI Content Creation & Marketing Studio',
+    contactEmail: 'contact@omnistudio.ai',
     contactPhone: '+1 (800) 555-0199',
-    website: 'https://apexaudiolabs.com',
+    website: 'https://omnistudio.ai',
     currency: '$',
     primaryColor: '#4f46e5',
     secondaryColor: '#0f172a',
@@ -37,7 +37,7 @@ export const PdfCatalogStudio: React.FC = () => {
     showPrices: true,
     showSku: true,
     headerNote: 'Official Wholesale & Retail Line Sheet - Volume 4',
-    footerNote: 'All products include 2-Year International Manufacturer Warranty',
+    footerNote: 'All products powered by OmniStudio Content & Marketing Pipeline',
   });
 
   // Product Inventory List
@@ -376,14 +376,21 @@ export const PdfCatalogStudio: React.FC = () => {
                 className="rounded-xl p-4 text-white shadow-md transition-colors"
                 style={{ backgroundColor: settings.primaryColor }}
               >
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h2 className="text-lg font-black tracking-tight uppercase">
-                      {settings.companyName}
-                    </h2>
-                    <p className="text-xs opacity-90">{settings.tagline}</p>
+                <div className="flex justify-between items-start gap-3">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/logo.png"
+                      alt="Company Logo"
+                      className="h-10 w-10 rounded-lg object-cover border border-white/30 shadow-sm shrink-0"
+                    />
+                    <div>
+                      <h2 className="text-base font-black tracking-tight uppercase">
+                        {settings.companyName}
+                      </h2>
+                      <p className="text-[11px] opacity-90">{settings.tagline}</p>
+                    </div>
                   </div>
-                  <span className="rounded bg-white/20 px-2 py-0.5 text-[10px] font-bold">
+                  <span className="rounded bg-white/20 px-2 py-0.5 text-[9px] font-bold shrink-0">
                     OFFICIAL LINE SHEET
                   </span>
                 </div>

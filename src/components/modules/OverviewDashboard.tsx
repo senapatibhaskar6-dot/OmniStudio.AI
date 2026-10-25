@@ -105,47 +105,64 @@ export const OverviewDashboard: React.FC<OverviewProps> = ({ onSelectTab }) => {
         <div className="absolute -right-16 -top-16 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl" />
         <div className="absolute -left-16 -bottom-16 h-80 w-80 rounded-full bg-purple-500/10 blur-3xl" />
 
-        <div className="relative z-10 max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-300">
-            <Zap className="h-3.5 w-3.5 text-indigo-400" />
-            Unified Creator & Marketing Infrastructure
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="max-w-2xl space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-300">
+              <Zap className="h-3.5 w-3.5 text-indigo-400" />
+              Unified Creator & Marketing Infrastructure
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              Create, Stylize & Publish Content{' '}
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
+                in One Studio
+              </span>
+            </h1>
+
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              OmniStudio AI combines media processing, face-swap & cartoon stylization,
+              AI story-to-animation synthesis, instant PDF catalog publishing, and ad graphic design
+              backed by high-performance Neon PostgreSQL architecture.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <button
+                onClick={() => onSelectTab('story-to-cartoon')}
+                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 hover:brightness-110 transition-all cursor-pointer"
+              >
+                <Sparkles className="h-4 w-4" />
+                Launch Story-to-Cartoon AI
+              </button>
+              <button
+                onClick={() => onSelectTab('video-processor')}
+                className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-5 py-3 text-xs sm:text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-all cursor-pointer"
+              >
+                <Video className="h-4 w-4 text-blue-400" />
+                YouTube & Shorts Downloader
+              </button>
+              <button
+                onClick={() => onSelectTab('pdf-catalog')}
+                className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-5 py-3 text-xs sm:text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-all cursor-pointer"
+              >
+                <FileSpreadsheet className="h-4 w-4 text-emerald-400" />
+                Create PDF Catalog
+              </button>
+            </div>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Create, Stylize & Publish Content{' '}
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
-              in One Studio
-            </span>
-          </h1>
-
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            OmniStudio AI combines media processing, face-swap & cartoon stylization,
-            AI story-to-animation synthesis, instant PDF catalog publishing, and ad graphic design
-            backed by high-performance Neon PostgreSQL architecture.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <button
-              onClick={() => onSelectTab('story-to-cartoon')}
-              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 hover:brightness-110 transition-all cursor-pointer"
-            >
-              <Sparkles className="h-4 w-4" />
-              Launch Story-to-Cartoon AI
-            </button>
-            <button
-              onClick={() => onSelectTab('video-processor')}
-              className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-5 py-3 text-xs sm:text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-all cursor-pointer"
-            >
-              <Video className="h-4 w-4 text-blue-400" />
-              YouTube & Shorts Downloader
-            </button>
-            <button
-              onClick={() => onSelectTab('pdf-catalog')}
-              className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-5 py-3 text-xs sm:text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-all cursor-pointer"
-            >
-              <FileSpreadsheet className="h-4 w-4 text-emerald-400" />
-              Create PDF Catalog
-            </button>
+          {/* Official Emblem & Badge Preview */}
+          <div className="relative shrink-0 flex flex-col items-center justify-center p-3 rounded-3xl bg-slate-950/80 border border-indigo-500/30 shadow-2xl shadow-indigo-500/20 backdrop-blur-sm group hover:border-indigo-400/60 transition-all">
+            <div className="relative h-44 w-44 sm:h-52 sm:w-52 rounded-2xl overflow-hidden">
+              <img
+                src="/logo.png"
+                alt="OmniStudio AI Official Emblem"
+                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="mt-2 text-center">
+              <div className="text-xs font-bold text-white tracking-wide">OmniStudio.AI</div>
+              <div className="text-[10px] text-indigo-400 font-medium">Official Studio Engine</div>
+            </div>
           </div>
         </div>
 

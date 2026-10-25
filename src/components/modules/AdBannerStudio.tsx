@@ -196,12 +196,19 @@ export const AdBannerStudio: React.FC = () => {
                   {badgeText}
                 </span>
 
-                {showRating && (
-                  <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-amber-300 border border-amber-400/20">
-                    <Star className="h-3 w-3 fill-amber-300" />
-                    <span>4.9 / 5.0 (12K+ Sold)</span>
+                <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-full text-[9px] font-bold text-white border border-white/20">
+                    <img src="/logo.png" alt="Logo" className="h-3.5 w-3.5 rounded-full object-cover" />
+                    <span>OmniStudio</span>
                   </div>
-                )}
+
+                  {showRating && (
+                    <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-amber-300 border border-amber-400/20">
+                      <Star className="h-3 w-3 fill-amber-300" />
+                      <span>4.9 / 5.0</span>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Middle Layer: Hero Product Cut-Out Image */}

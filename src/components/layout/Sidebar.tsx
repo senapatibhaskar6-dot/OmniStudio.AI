@@ -147,9 +147,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
 
       {/* Bottom Quick Help Card */}
       <div className="rounded-2xl border border-indigo-950/60 bg-gradient-to-b from-indigo-950/30 to-slate-900/60 p-3.5 text-left">
-        <div className="flex items-center justify-between mb-1.5">
-          <span className="text-xs font-semibold text-indigo-300">Unified Studio Hub</span>
-          <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
+        <div className="flex items-center gap-2.5 mb-2.5">
+          <img 
+            src="/logo.png" 
+            alt="OmniStudio AI Logo" 
+            className="h-8 w-8 rounded-lg object-cover border border-indigo-500/30 shadow-md"
+          />
+          <div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs font-bold text-white">OmniStudio.AI</span>
+              <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            </div>
+            <span className="text-[10px] text-indigo-300 font-medium">Unified Creator Hub</span>
+          </div>
         </div>
         <p className="text-[11px] text-slate-400 leading-relaxed mb-3">
           All-in-one suite combining video download & processing, cartoon synthesis, PDF catalog exports & ad generation.

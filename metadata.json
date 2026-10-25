@@ -1,0 +1,6 @@
+{
+  "name": "OmniStudio AI - All-in-One Content & Marketing Suite",
+  "description": "Production-grade All-in-One Content Creation & Marketing Studio: Media & Video studio, YouTube/Shorts processor, Face Swap & Cartoon styler, Story-to-Cartoon AI animation generator, PDF Catalog creator, Ad Banner designer, and Neon PostgreSQL data models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
